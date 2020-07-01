@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1593616243786" clover="3.2.0">
-  <project timestamp="1593616243786" name="All files">
-    <metrics statements="17" coveredstatements="17" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3" elements="27" coveredelements="27" complexity="0" loc="17" ncloc="17" packages="1" files="1" classes="1"/>
+<coverage generated="1593621063079" clover="3.2.0">
+  <project timestamp="1593621063079" name="All files">
+    <metrics statements="18" coveredstatements="18" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4" elements="32" coveredelements="32" complexity="0" loc="18" ncloc="18" packages="1" files="1" classes="1"/>
     <file name="solution.js" path="/Users/bella/my-work/tests/solution.js">
-      <metrics statements="17" coveredstatements="17" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="9" count="8" type="cond" truecount="5" falsecount="0"/>
-      <line num="10" count="3" type="stmt"/>
-      <line num="11" count="3" type="stmt"/>
-      <line num="13" count="5" type="stmt"/>
-      <line num="14" count="5" type="cond" truecount="2" falsecount="0"/>
-      <line num="15" count="2" type="stmt"/>
-      <line num="17" count="3" type="stmt"/>
-      <line num="18" count="6" type="stmt"/>
-      <line num="19" count="6" type="stmt"/>
-      <line num="20" count="115" type="stmt"/>
-      <line num="22" count="6" type="stmt"/>
-      <line num="25" count="3" type="stmt"/>
+      <metrics statements="18" coveredstatements="18" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
+      <line num="5" count="5" type="stmt"/>
+      <line num="6" count="5" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="10" type="cond" truecount="4" falsecount="0"/>
+      <line num="12" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="5" type="stmt"/>
+      <line num="16" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+      <line num="20" count="6" type="stmt"/>
+      <line num="21" count="6" type="stmt"/>
+      <line num="22" count="115" type="stmt"/>
+      <line num="24" count="6" type="stmt"/>
       <line num="27" count="3" type="stmt"/>
-      <line num="28" count="3" type="stmt"/>
-      <line num="29" count="96" type="stmt"/>
-      <line num="33" count="1" type="stmt"/>
+      <line num="29" count="3" type="stmt"/>
+      <line num="30" count="96" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
