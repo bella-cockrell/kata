@@ -1,20 +1,16 @@
-// class SolutionTypeError extends Error {
-//   constructor(message) {
-//     super(message);
-//     this.name = 'SolutionTypeError'
-//   }
-// }
+//I'm playing around with the code to show off. This is not production-ready code.
+
+class SolutionTypeError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'SolutionTypeError'
+  }
+}
 
 const solution = (number) => {
-  try {
-    if (typeof number === 'object') throw console.log('input is object');
-    if (typeof number === 'string') throw console.log('input is string');
-    if (Array.isArray(number)) throw console.log('input is array');
-  }
-  catch (err) {
-    console.log('Invalid input');
-    return 0;
-  }
+  if (typeof number === 'object' && !Array.isArray(number)) throw new SolutionTypeError('input is object');
+  if (Array.isArray(number)) throw new SolutionTypeError('input is array');
+  if (typeof number === 'string') throw new SolutionTypeError('input is string');
 
   const flooredLimit = Math.floor(number);
   if (flooredLimit <= 0) {
