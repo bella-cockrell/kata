@@ -1,5 +1,3 @@
-//I'm playing around with the code to show off. This is not production-ready code.
-
 class SolutionTypeError extends Error {
   constructor(message) {
     super(message);
@@ -8,11 +6,9 @@ class SolutionTypeError extends Error {
 }
 
 const solution = (number) => {
-  if (typeof number === 'object' && !Array.isArray(number)) throw new SolutionTypeError('input is object');
-  if (Array.isArray(number)) throw new SolutionTypeError('input is array');
-  if (typeof number === 'string') throw new SolutionTypeError('input is string');
-
   const flooredLimit = Math.floor(number);
+  if (Number.isNaN(flooredLimit)) throw new SolutionTypeError('input is NaN');
+
   if (flooredLimit <= 0) {
     return 0;
   } else {
@@ -32,3 +28,4 @@ const solution = (number) => {
 }
 
 module.exports = solution;
+module.exports.SolutionTypeError = SolutionTypeError;
