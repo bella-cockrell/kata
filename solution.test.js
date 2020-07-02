@@ -1,5 +1,6 @@
 const solution = require('./solution');
 
+
 test('should handle the sum of multiples of 3 or 5 that is less than number', () => {
   expect(solution(-5)).toBe(0); //handle negative
   expect(solution(0)).toBe(0); //handle 0
@@ -9,9 +10,9 @@ test('should handle the sum of multiples of 3 or 5 that is less than number', ()
 })
 
 test('should handle non-number types', () => {
-  expect(() => { solution([]) }).toThrow();//handle empty array
-  expect(() => { solution([1, 2, 3]) }).toThrow();//handle full array
-  expect(() => { solution({}) }).toThrow();//handle object
-  expect(() => { solution({ firstName: 'Bella' }) }).toThrow();//handle full object
-  expect(() => { solution("Hello") }).toThrow(); //handle string
+  expect(solution([])).toBe(0);//handle empty array
+  expect(() => { solution([1, 2, 3]) }).toThrow(solution.SolutionTypeError);//handle full array
+  expect(() => { solution({}) }).toThrow(solution.SolutionTypeError);//handle object
+  expect(() => { solution({ firstName: 'Bella' }) }).toThrow(solution.SolutionTypeError);//handle full object
+  expect(() => { solution("Hello") }).toThrow(solution.SolutionTypeError); //handle string
 })
