@@ -1,4 +1,9 @@
 function markdownParser(markdown) {
+  // let htmlRegex = /(?=[#])(.*)(?=[<])/
+  // if (markdown.match(htmlRegex)) {
+  //   markdown = markdown.match(htmlRegex)[0]
+  // }
+  markdown = markdown.trim();
   if (!markdown.includes(' ')) {
     return markdown
   } else {
