@@ -9,4 +9,5 @@ test('should return a string formatted as HTML', () => {
   expect(markdownParser('#Header Small')).toBe('#Header Small') //returns in full as invalid
   expect(markdownParser('#9## Header')).toBe('#9## Header') // hashes array does not contain all hashes
   expect(markdownParser('######## Header')).toBe('######## Header') // returns in full as too many hashes
+  expect(markdownParser('<h0>#### Space Jam</h0>')).toBe('<h4>Space Jam</h4>') // another edge case
 })
