@@ -1,22 +1,24 @@
-function markdownParser(markdown) {
-  let array = Array.from(markdown);
-  if (array.indexOf(' ') === -1) {
-    console.log(markdown);
-    return markdown;
+function markdownParser(text) {
+  let markdownArray = Array.from(text)
+  if (!markdownArray.includes(' ')) {
+    return text
   } else {
-    let hashArray = String(array.splice(0, array.indexOf(' '))).replace(/,/g, '');
+    let hashes = markdownArray.slice(0, markdownArray.indexOf(' '))
+    const hashChecker = (element) => {
+      return element === '#'
+    }
 
-    let headerArray = String(array.splice(array.indexOf(' '), array.length)).trim().replace(/,/g, '');
-    if (hashArray.search(/#{7,}/gm) === 0) {
-      console.log(markdown);
-      return markdown;
+    if (hashes.every(hashChecker) && hashes.length < 7) {
+      //markdown headers only go up to 6 hashes
+      let headerString = String(
+        markdownArray.slice(markdownArray.indexOf(' '), markdownArray.length)
+      )
+      let cleanHeaderString = headerString.trim().replace(/,/g, '')
+      return `<h${hashes.length}>${cleanHeaderString}</h${hashes.length}>`
     } else {
-      const hashNumber = hashArray.length;
-      console.log(`<h${hashNumber}>${headerArray}</h${hashNumber}>`);
-      return (`<h${hashNumber}>${headerArray}</h${hashNumber}>`);
+      return text
     }
   }
 }
 
-
-module.exports = markdownParser;
+module.exports = markdownParser
